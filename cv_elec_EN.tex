@@ -1,0 +1,197 @@
+\documentclass[a4paper,10.9pt]{article}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{wrapfig}
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{tabularx}
+\usepackage[1cm]{geometry}
+\usepackage{bibentry}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+%\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+%\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+\usepackage{fancyhdr, lastpage}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[C]{Page {\thepage} of \pageref{LastPage}}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\nobibliography{ref}
+  \bibliographystyle{unsrt}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+
+\begin{center}
+{ \Huge Martín \textsc{Villegas Pico}}
+\end{center}
+%\hfill
+%\includegraphics[width=9em]{img/martin.png} \\
+\textcolor{black!30}{\rule[.1\baselineskip]{\textwidth}{1pt}}
+
+\begin{center}
+Conocoto, Rumiñahui, Pichincha\\
+%Barrio La Floresta, Cantón Cevallos, Tungurahua\\
+Phone: +593 98-346-8911 | Email: \href{mailto:mbvillegas94@gmail.com}{mbvillegas94@gmail.com}
+\end{center}
+
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+%\section{Información Personal}
+%
+%\begin{tabular}{rl}
+    %\textsc{Lugar y fecha de nacimiento:} & Tungurahua, Ecuador  | 19 de abril de 1994\\
+    %\textsc{Dirección:}   & Loja 163 y Unidad Nacional, Urb. La Colina, Sangolquí, Pichincha \\
+    %\textsc{Teléfono:}     & +593 99-410-1810\\
+    %\textsc{Email:}     & \href{mailto:mbvillegas94@gmail.com}{mbvillegas94@gmail.com}
+%\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{r|l}	
+ \textsc{Jan} 2020& \textsc{Electronics, Automation and Control Engineer}\\&
+ \textbf{Universidad de las Fuerzas Armadas ESPE} | Sangolquí, Pichincha\\
+&Senescyt Reg. No. 1079-2020-2169562\\
+\\
+& Thesis: ``Real Time Lane Departure Detection.'' | \small Advisor: Wilbert \textsc{Aguilar}, Ph.D\\
+\multicolumn{2}{c}{} \\
+ \textsc{Jul} 2012 &  \textsc{Physics \& Mathematics High School Degree}\\&
+ \textbf{Juan León Mera “La Salle”} | Ambato, Tungurahua\\
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+\textsc{Feb - Dec 2020} &\emph{Independent Contractor}\\&\footnotesize{Electrical system and Data networking planning and implementation.}\\&\footnotesize{CCTV Monitoring planning and implementation.} \\&\footnotesize{Full-stack web development.}}\\
+\multicolumn{2}{c}{} \\
+\textsc{Aug 2018 - Feb 2019} &\textsc{Centro de Investigación de Aplicaciones Militares (CIAM - CICTE)} \\&\emph{Web Programmer \& Electronics Developer}\\&\footnotesize{Design and implementation of an automated entrance system in the research center using magnetic cards.}\\&\footnotesize{Electrical system upgrade of the computer desks at Universidad de las Fuerzas Armadas ESPE.}\\
+%\footnotesize{\emph{Ref.: Cpt. William López, Cel.: +593 99-714-6138}}\\
+%\multicolumn{2}{c}{} \\
+\\
+ \textsc{Jan - Mar 2018} &\textsc{Universidad de las Fuerzas Armadas ESPE} | Sangolquí, Pichincha \\&\emph{Teaching Assistant}\\&\footnotesize{Teach and conduct practical laboratories of the Digital Electronics class.}\\
+\multicolumn{2}{c}{} \\
+ \textsc{Feb - Mar 2015}&\textsc{Capacitaciones Guerrero} | Ambato, Tungurahua \\&\emph{Partial time Maths \& Physics Teacher}\\&\footnotesize{Train high school and college students in advanced math, calculus and physics.}\\ &
+%\footnotesize{\emph{Ref.: Ing. Elsa Guerrero, Cel.: +593 98-689-3333}}\\
+\end{tabular}
+
+%\footnotesize{\emph{Ref.: Ing. Paola León MSc., Cel.: +593 99-191-9087}}\\
+%\multicolumn{2}{c}{} \\
+% \textsc{Feb - Mar 2015}&\textsc{Capacitaciones Guerrero} | Ambato, Tungurahua \\&\emph{Mathematics and Science Teacher}\\&\footnotesize{
+%Support university and high school students in mathematics, differential and integral calculus, physics, and chemistry.}\\ &
+%\footnotesize{\emph{Ref.: Ing. Elsa Guerrero, Cel.: +593 98-689-3333}}\\
+\end{tabular}
+
+\section{Conferences \& Scientific Publications}
+\begin{enumerate}
+	\item \bibentry{lidar}
+\end{enumerate}
+
+%Section: Scholarships and additional info
+\section{Certificates}
+\begin{tabular}{r|l}	
+ \textsc{Mar} 2017 &  \textsc{Proficiency in the English Language}\\&
+ \textbf{Fulbright Comission Ecuador} | Quito, Pichincha\\
+
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Spanish:}&Native\\
+\textsc{English:}&Proficient\\
+\end{tabular}
+
+\section{Programming skills}
+Advanced knowledge in:\\
+\\
+\begin{tabular}{rl}
+Binary, Hexadecimal, Assembly, C/C++, Python, Matlab\\
+\end{tabular}
+
+\section{Skills for the industry}
+Advanced knowledge in:\\
+\\
+\begin{tabular}{rl}
+Digital electronics, PLCs, HMIs, Industrial Networks, Electrical systems and sensors.\\
+\end{tabular}
+
+
+\section{Other skills}
+
+\begin{itemize}
+	\item Effective oral and written communication
+
+\item Leadership and teamwork
+
+\item Solid structuring of algorithms
+\end{itemize}
+
+\end{document}
