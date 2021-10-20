@@ -4,6 +4,8 @@
 *.log
 *.pdf
 *.synctex
+*.synctex(busy)
 *.toc
 *.tmp
 *.out
+*.gz
